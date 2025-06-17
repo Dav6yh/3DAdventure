@@ -11,6 +11,7 @@ TagManager:
   - Interagir
   - Chave
   - Quebra
+  - Vida
   layers:
   - Default
   - TransparentFX

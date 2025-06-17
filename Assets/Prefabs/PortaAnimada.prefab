@@ -181,6 +181,9 @@ GameObject:
   - component: {fileID: 5793896193489044942}
   - component: {fileID: 8614535795647705348}
   - component: {fileID: 8932023648879088286}
+  - component: {fileID: 2099395116904339309}
+  - component: {fileID: 6322797533544222670}
+  - component: {fileID: 1397038754624254580}
   m_Layer: 0
   m_Name: PortaAnimada
   m_TagString: Untagged
@@ -279,3 +282,66 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2154953612500603615, guid: 077e782a53d70bb48b2bcb9e6730e981, type: 3}
+--- !u!65 &2099395116904339309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7821634186792947921}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9474566, y: 4, z: 1.0000006}
+  m_Center: {x: -1.5262717, y: 2, z: -0.00000029802322}
+--- !u!65 &6322797533544222670
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7821634186792947921}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0436628, y: 4, z: 1.0000006}
+  m_Center: {x: 1.4781686, y: 2, z: -0.00000029802322}
+--- !u!65 &1397038754624254580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7821634186792947921}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 1.108516, z: 1.0000006}
+  m_Center: {x: 1.4267813e-15, y: 3.4457421, z: -0.00000029802322}
