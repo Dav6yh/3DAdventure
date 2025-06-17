@@ -12,6 +12,7 @@ TagManager:
   - Chave
   - Quebra
   - Vida
+  - Mana
   layers:
   - Default
   - TransparentFX
