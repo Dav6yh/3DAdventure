@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float velocidadeAtual;
     private bool contato = false;
     private SistemaDeVida sVida;
+    private SistemaInterativo sInterativo;
     private bool morrer = true;
     private bool temChave = false;
     private int numeroChave = 0;
@@ -22,19 +24,28 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject machadoPreFab;
     [SerializeField] private GameObject miraMachado;
     [SerializeField] private int forcaArremeco;
+    [SerializeField] private CinemachineCamera cineCamera;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        DontDestroyOnLoad(this);
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         velocidadeAtual = velocidadeAndar;
         sVida = GetComponent<SistemaDeVida>();
+        sInterativo = GetComponent<SistemaInterativo>();
+        velocidadeAtual = velocidadeAndar;
+
+        ProcuraReferencias();
+
     }
 
     // Update is called once per frame
     void Update()
     { 
+        ProcuraReferencias();
+
         if (Input.GetMouseButtonDown(0))
         {
             contato = true;
@@ -42,10 +53,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (sVida.EstaVivo())
         {
-            Andar();
+            //Andar();
             Girar();
             Pular();
-            Correr();
+            //Correr();
             Perfurar();
             Jogar();
         }
@@ -54,8 +65,27 @@ public class PlayerMovement : MonoBehaviour
             Morrer();
         }
 
+
+    }
+    private void FixedUpdate()
+    {
+        if (sVida.EstaVivo())
+        {
+            Correr();
+            Andar();
+        }
     }
 
+    private void ProcuraReferencias()
+    {
+        
+        if (cineCamera = null)
+        {
+            //transform.position = GameObject.Find("StartPoint").transform.position;
+            cineCamera = GameObject.Find("CinemachineCamera").GetComponent<CinemachineCamera>();
+            cineCamera.Follow = this.gameObject.transform;
+        }
+    }
     private void Andar()
     {
         inputV = Input.GetAxis("Vertical");

@@ -13,9 +13,25 @@ public class SistemaInterativo : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        spriteInterface.enabled = false;
-        textoAviso.enabled = false;
+        ProcuraReferencias();
+
     }
+
+    private void Update()
+    {
+        ProcuraReferencias();
+    }
+    private void ProcuraReferencias()
+    {
+        if (spriteInterface == null || textoAviso == null)
+        {
+            spriteInterface = GameObject.Find("AvisoSprite").GetComponent<Image>();
+            spriteInterface.enabled = false;
+            textoAviso = GameObject.Find("AvisoTexto").GetComponent<TextMeshProUGUI>();
+            textoAviso.enabled = false;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent<Avisos>(out Avisos a))

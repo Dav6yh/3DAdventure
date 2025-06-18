@@ -827,6 +827,10 @@ MonoBehaviour:
   velocidadeCorrer: 10
   velocidadeAndar: 5
   forcaPulo: 200
+  quebraPreFab: {fileID: 0}
+  machadoPreFab: {fileID: 0}
+  miraMachado: {fileID: 0}
+  forcaArremeco: 0
 --- !u!114 &1632512701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,6 +844,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
+  mana: 100
+  manaIndicador: {fileID: 0}
+  vidaIndicador: {fileID: 0}
 --- !u!1 &1830377055
 GameObject:
   m_ObjectHideFlags: 0

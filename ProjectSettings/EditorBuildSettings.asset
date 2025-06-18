@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/CenaTeste.unity
+    guid: 3e6ce8ae53c41ba4384f1b6b14807ef3
+  - enabled: 1
+    path: Assets/Scenes/Masmorra.unity
+    guid: c05322f6be759e2439b445a2d7b98c66
+  - enabled: 1
+    path: Assets/Scenes/Masmorra 1.unity
+    guid: 31508c2c50e9f0a45af67eb69dc40692
+  - enabled: 1
+    path: Assets/Scenes/SetupPersonagem.unity
+    guid: ab675e7a2783074408bba97d2f37442e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -18,7 +18,7 @@ public class SistemaDeVida : MonoBehaviour
     {
         if (manaIndicador == null)
         {
-            manaIndicador = GameObject.Find("manaIndicador").GetComponent<Slider>();
+            manaIndicador = GameObject.Find("Mana").GetComponent<Slider>();
             manaIndicador.maxValue = mana;
             manaIndicador.value = mana;
         }
