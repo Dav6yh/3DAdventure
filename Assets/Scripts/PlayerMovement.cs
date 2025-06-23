@@ -26,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int forcaArremeco;
     [SerializeField] private CinemachineCamera cineCamera;
 
+    private void Awake()
+    {
+        ProcuraReferencias();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,8 +40,8 @@ public class PlayerMovement : MonoBehaviour
         sVida = GetComponent<SistemaDeVida>();
         sInterativo = GetComponent<SistemaInterativo>();
         velocidadeAtual = velocidadeAndar;
-
-        ProcuraReferencias();
+       
+        
 
     }
 
@@ -79,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
     private void ProcuraReferencias()
     {
         
-        if (cineCamera = null)
+        if (cineCamera == null)
         {
             //transform.position = GameObject.Find("StartPoint").transform.position;
             cineCamera = GameObject.Find("CinemachineCamera").GetComponent<CinemachineCamera>();
