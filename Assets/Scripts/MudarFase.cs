@@ -41,4 +41,8 @@ public class MudarFase : MonoBehaviour
         SceneManager.LoadScene(nomeDaProximaFase);
     }
 
+    public void MudarParaMasmorra()
+    {
+        SceneManager.LoadScene("Masmorra");
+    }
 }
