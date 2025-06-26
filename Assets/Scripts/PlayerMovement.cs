@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -159,6 +160,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("EstaVivo", false);
         animator.SetTrigger("Morrer");
         rb.Sleep();
+        WaitForSeconds wait = new WaitForSeconds(4f);
+        SceneManager.LoadScene("GameOver");
 
     }
 

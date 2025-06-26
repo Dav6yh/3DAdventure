@@ -45,4 +45,14 @@ public class MudarFase : MonoBehaviour
     {
         SceneManager.LoadScene("Masmorra");
     }
+
+    public void MudarParaCreditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+
+    public void MudarParaInicio()
+    {
+        SceneManager.LoadScene("CenaInicial");
+    }
 }
