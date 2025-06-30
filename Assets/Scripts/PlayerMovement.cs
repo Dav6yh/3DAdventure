@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
+    private AudioSource audioSource;
     private float inputH;
     private float inputV;
     private Animator animator;
@@ -26,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject miraMachado;
     [SerializeField] private int forcaArremeco;
     [SerializeField] private CinemachineCamera cineCamera;
+    [SerializeField] private GameObject startPoint;
+    
 
     private void Awake()
     {
@@ -35,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this);
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         velocidadeAtual = velocidadeAndar;
@@ -86,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (cineCamera == null)
         {
-            //transform.position = GameObject.Find("StartPoint").transform.position;
+            transform.position = GameObject.Find("StartPoint").transform.position;
             cineCamera = GameObject.Find("CinemachineCamera").GetComponent<CinemachineCamera>();
             cineCamera.Follow = this.gameObject.transform;
         }
@@ -159,8 +163,8 @@ public class PlayerMovement : MonoBehaviour
         morrer = false;
         animator.SetBool("EstaVivo", false);
         animator.SetTrigger("Morrer");
+        WaitForSeconds wait = new WaitForSeconds(5f);
         rb.Sleep();
-        WaitForSeconds wait = new WaitForSeconds(4f);
         SceneManager.LoadScene("GameOver");
 
     }
